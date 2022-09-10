@@ -1,0 +1,89 @@
+
+
+.jelly-fish {
+    position: fixed;
+    -webkit-animation: go-up 12s ease-in-out infinite;
+    animation: go-up 12s ease-in-out infinite;
+}
+
+.jelly-fish:after {
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #161c50;
+    border-radius: 50px 50px 0 0;
+    transform-origin: bottom center;
+    -webkit-animation: glow-jelly 1s ease-in-out infinite alternate;
+    animation: glow-jelly 1s ease-in-out infinite alternate;
+}
+
+.jelly-fish:before {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    content: " ";
+    top: 25px;
+    left: 15px;
+    transform-origin: top center;
+    background: #161c50;
+    border-radius: 0 0 50% 50%;
+    -webkit-animation: glow-jelly-tails 1s ease-in-out infinite alternate;
+    animation: glow-jelly-tails 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow-jelly-tails {
+    0% {
+        height: 25px;
+        background: #3746c8;
+        transform: scale(1, 0.3);
+    }
+
+    100%,
+    75% {
+        background: #161c50;
+        height: 50px;
+        transform: scale(0.4, 1);
+    }
+}
+
+@keyframes glow-jelly-tails {
+    0% {
+        height: 25px;
+        background: #3746c8;
+        transform: scale(1, 0.3);
+    }
+
+    100%,
+    75% {
+        background: #161c50;
+        height: 50px;
+        transform: scale(0.4, 1);
+    }
+}
+
+@-webkit-keyframes glow-jelly {
+    0% {
+        background: #11153c;
+        transform: scale(1, 1);
+    }
+
+    100%,
+    75% {
+        background: #3746c8;
+        transform: scale(0.4, 1.6);
+    }
+}
+
+@keyframes glow-jelly {
+    0% {
+        background: #11153c;
+        transform: scale(1, 1);
+    }
+
+    100%,
+    75% {
+        background: #3746c8;
+        transform: scale(0.4, 1.6);
+    }
+}
