@@ -11,6 +11,8 @@
 --primary-alt: #706aec;
 --primary-light: rgb(18 17 49 / 44%);
 --container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+--fd-1:#004462;
+--fd-2:#64ffda;
 }
 
 * {
@@ -293,27 +295,27 @@ top:-20px;
 }
 
 .text-copy:nth-child(1) {
-    stroke: #004462;
+    stroke: var(--fd-1);
     animation-delay: -1;
 }
 
 .text-copy:nth-child(2) {
-    stroke:#64ffda ;
+    stroke:var(--fd-2) ;
     animation-delay: -2s;
 }
 
 .text-copy:nth-child(3) {
-    stroke:#004462 ;
+    stroke:var(--fd-1) ;
     animation-delay: -3s;
 }
 
 .text-copy:nth-child(4) {
-    stroke:#64ffda ;
+    stroke:var(--fd-2) ;
     animation-delay: -4s;
 }
 
 .text-copy:nth-child(5) {
-    stroke:#004462 ;
+    stroke: var(--fd-1);
     animation-delay: -5s;
 }
 
@@ -1238,9 +1240,13 @@ header .button{
         transform: translate(-50%, -50%);
         width: 70%;
     }
-        .me-img{
-            display: block;
-        }
+.me-img {
+    display: block;
+    position: absolute;
+    top: 150%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
 .pg-img {
     position: absolute;
     top: 190%;
